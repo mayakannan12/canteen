@@ -1,0 +1,90 @@
+import React from 'react';
+import './Home.css';
+
+function Home() {
+  return (
+    <div className="home-container">
+      <nav className="navbar">
+        <h2 className="logo">CanteenCravings 🍔</h2>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/menu">Menu</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </nav>
+
+      <div className="hero">
+        <h1>Welcome to Your College Canteen!</h1>
+        <p>Order your favorite meals online & skip the queue. 😋</p>
+        <a href="/menu"><button className="order-btn">Order Now</button></a>
+      </div>
+    </div>
+  );
+}
+
+export default Home;
+
+.home-container {
+  background-image: url('/canteen.jpg'); /* Add image in public folder */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 20vh;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.order-btn {
+  background-color: #ff9900;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.order-btn:hover {
+  background-color: #ff6600;
+}
+
